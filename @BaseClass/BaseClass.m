@@ -58,7 +58,7 @@ classdef (Abstract) BaseClass < handle
 
   % same as constant but now showing up as property
   properties (Hidden=true)
-    logFilePath = [getuserdir '\fsp_log.txt'];
+    logFilePath = [userpath '\fsp_log.txt'];
   end
 
 
