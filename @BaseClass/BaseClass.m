@@ -26,7 +26,7 @@ classdef (Abstract) BaseClass < handle
     drawNow(1,1) {mustBeNumericOrLogical} = true; % call drawnow when done with plotting?
 
     colorMap(:,3) {mustBeNumeric} = hot(256);
-    color(1,3) {mustBeNumeric} = Colors.DarkGreen();
+    color(1,3) {mustBeNumeric} = [0.0, 0.6, 0.0]; % dark green
     figureHandle; % figure handle to use for next plot
   end
 
