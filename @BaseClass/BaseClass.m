@@ -34,9 +34,12 @@ classdef (Abstract) BaseClass < handle
     % properties controlling degree of processing output -----------------------
     silent(1,1) {mustBeNumericOrLogical};
       % when silent = true, nothing is output or plotted, vebose output saved to log file
-    % verboseOutput(1,1) {mustBeNumericOrLogical}; % more detailed output to workspace...
-    % verbosePlotting(1,1) {mustBeNumericOrLogical}; % more figures...
-    % figureVisibility(1,:) char {mustBeMember(figureVisibility,{'on','off',''})};
+  end
+
+  properties (Abstract)
+    % verboseOutput(1,1) {mustBeNumericOrLogical} = true; % more detailed output to workspace...
+    % verbosePlotting(1,1) {mustBeNumericOrLogical} = false; % more figures...
+    % figureVisibility(1,:) char {mustBeMember(figureVisibility,{'on','off'})} = 'on';
   end
 
   % depended properties are calculated from other properties
@@ -54,6 +57,7 @@ classdef (Abstract) BaseClass < handle
   properties(Constant)
     FONT_SIZE = 12;
     LINE_WIDTH = 1.5;
+    LEGEND_FONT_SIZE = 8;
   end
 
   % same as constant but now showing up as property
